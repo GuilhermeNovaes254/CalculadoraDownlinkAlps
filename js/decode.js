@@ -10,6 +10,10 @@ const processData = () => {
     let stopDetectionWindow = document.getElementById("stopDetectionWindow").value;
     let stopDetectionThreshold = document.getElementById("stopDetectionThreshold").value;
 
+    let tempVar = parseInt(aliveStaticStateTimer,10)
+    if(tempVar != 0){
+        aliveStaticStateTimer = (tempVar/3).toString();
+    }
 
     //Montagem dos bytes
     let byte0_1 = parseInt('5', 10).toString(16);
