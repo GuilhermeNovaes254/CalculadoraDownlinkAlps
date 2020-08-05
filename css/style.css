@@ -11,25 +11,6 @@ body {
     letter-spacing: normal;
 }
 
-#botao {
-    padding: 5px 20px;
-    background-color: #01358d;
-    color: #ffffff;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    width: 100px;
-    text-align: center;
-}
-
-#botao:focus {
-    background-color: #e24747;
-    color: #ffffff;
-    outline: none;
-}
-
-
-
 h1 {
     font-size: 24px;
 }
@@ -40,7 +21,7 @@ label {
 }
 
 
-#botao,
+/* #botao, */
 input,
 select {
     font-size: 16px;
@@ -62,4 +43,26 @@ ul li {
     color: #01358d;
     font-size: 20px;
 
+}
+
+.botao {
+    display:inline-block;
+    color:#ffffff;
+    border:1px solid #CCC;
+    background:#01358d;
+    box-shadow: 0 0 5px -1px rgba(1,53,141,0.2);
+    cursor:pointer;
+    vertical-align:middle;
+    max-width: 100px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 6px;
+}
+.botao:hover {
+    color:#ffffff;
+    border:1px solid #CCC;
+    background:rgb(226, 71, 71);
+    box-shadow: 0 0 5px -1px rgba(226,71,71,0.5);
+    padding: 10px;
+    font-size: 17px;
 }

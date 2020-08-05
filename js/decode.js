@@ -55,14 +55,17 @@ document.querySelector("form").addEventListener('change', function () {
     //Monta String
     let stringDownlink = byte0_1 + byte0_2 + byte1 + byte2 + byte3_1 + byte3_2 + byte4_1 + byte4_2 + byte5_1 + byte5_2 + byte6 + byte7;
     // alert(stringDownlink);
-    console.log(document.getElementById('calculado').value)
+    // console.log(document.getElementById('calculado').innerText)
     document.getElementById('calculado').innerText = stringDownlink.toUpperCase();
+
 })
 
 
-function copy() {
-
-    let copyText = document.getElementById("calculado");
-    copy(copyText)
-
-}
+document.querySelector(".botao").addEventListener("click", function(){
+    let copyText = document.getElementById('calculado').innerText;
+    console.log(copyText)
+    copyText.select();
+    copyText.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+    console.log('Copiado')
+})
