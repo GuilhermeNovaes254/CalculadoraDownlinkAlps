@@ -56,7 +56,7 @@ document.querySelector("form").addEventListener('change', function () {
     let stringDownlink = byte0_1 + byte0_2 + byte1 + byte2 + byte3_1 + byte3_2 + byte4_1 + byte4_2 + byte5_1 + byte5_2 + byte6 + byte7;
     // alert(stringDownlink);
     console.log(document.getElementById('calculado').value)
-    document.getElementById('calculado').innerText = stringDownlink;
+    document.getElementById('calculado').innerText = stringDownlink.toUpperCase();
 })
 
 
