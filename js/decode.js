@@ -1,4 +1,4 @@
-const processData = () => {
+document.querySelector("form").addEventListener('change', function () {
     //Entrada dos dados pelo formulário
     let aliveMovingStateTimer = document.getElementById("aliveMovingStateTimer").value;
     let aliveStaticStateTimer = document.getElementById("aliveStaticStateTimer").value;
@@ -10,9 +10,9 @@ const processData = () => {
     let stopDetectionWindow = document.getElementById("stopDetectionWindow").value;
     let stopDetectionThreshold = document.getElementById("stopDetectionThreshold").value;
 
-    let tempVar = parseInt(aliveStaticStateTimer,10)
-    if(tempVar != 0){
-        aliveStaticStateTimer = (tempVar/3).toString();
+    let tempVar = parseInt(aliveStaticStateTimer, 10)
+    if (tempVar != 0) {
+        aliveStaticStateTimer = (tempVar / 3).toString();
     }
 
     //Montagem dos bytes
@@ -54,5 +54,15 @@ const processData = () => {
 
     //Monta String
     let stringDownlink = byte0_1 + byte0_2 + byte1 + byte2 + byte3_1 + byte3_2 + byte4_1 + byte4_2 + byte5_1 + byte5_2 + byte6 + byte7;
-    alert(stringDownlink);
+    // alert(stringDownlink);
+    console.log(document.getElementById('calculado').value)
+    document.getElementById('calculado').innerText = stringDownlink;
+})
+
+
+function copy() {
+
+    let copyText = document.getElementById("calculado");
+    copy(copyText)
+
 }
