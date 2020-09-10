@@ -1,4 +1,4 @@
-document.querySelector("form").addEventListener('change', function () {
+document.querySelector("form").addEventListener('keyup', function () {
     //Entrada dos dados pelo formulário
     let aliveMovingStateTimer = document.getElementById("aliveMovingStateTimer").value;
     let aliveStaticStateTimer = document.getElementById("aliveStaticStateTimer").value;
