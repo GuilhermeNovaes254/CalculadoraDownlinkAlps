@@ -1,4 +1,4 @@
-document.querySelector("form").addEventListener('keyup', function () {
+document.querySelector("form").addEventListener('click', function () {
     //Entrada dos dados pelo formulário
     let aliveMovingStateTimer = document.getElementById("aliveMovingStateTimer").value;
     let aliveStaticStateTimer = document.getElementById("aliveStaticStateTimer").value;
@@ -61,11 +61,11 @@ document.querySelector("form").addEventListener('keyup', function () {
 })
 
 
-document.querySelector(".botao").addEventListener("click", function(){
-    let copyText = document.getElementById('calculado').innerText;
-    console.log(copyText)
-    copyText.select();
-    copyText.setSelectionRange(0, 99999)
-    document.execCommand("copy");
-    console.log('Copiado')
-})
+// document.querySelector(".botao").addEventListener("click", function(){
+//     let copyText = document.getElementById('calculado').innerText;
+//     console.log(copyText)
+//     copyText.select();
+//     copyText.setSelectionRange(0, 99999)
+//     document.execCommand("copy");
+//     console.log('Copiado')
+// })
