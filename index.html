@@ -1,190 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css " type="text/css">
-    <title>Downlink Alps</title>
+    <title>Calculadora de Downlinks
+
+    </title>
 </head>
 
 <body>
-    <section>
-        <h1>Decodificação do Downlink do ALPS Lykaner 5</h1>
-        <p>Prencha todos os parâmetros, os não selecionados adotarão o valor padrão.</p>
-
-    </section>
-
-    <section>
-        <form action="./JS/decode.js" method="post" name="formulario" id="formulario" class="form_class">
-            <div class="form-group">
-                <ul>
-                    <li>
-                        <label for="speed">Velocidade:</label>
-                        <select for="speed" name="speed" id="speed">
-                            <option value="0">Desligado</option>
-                            <option value="1">5 km/h</option>
-                            <option value="2">10 km/h</option>
-                            <option value="3">15 km/h</option>
-                            <option value="4">20 km/h</option>
-                            <option value="5">25 km/h</option>
-                            <option value="6">30 km/h</option>
-                            <option value="7">35 km/h</option>
-                            <option selected value="8">40 km/h</option>
-                            <option value="9">45 km/h</option>
-                            <option value="10">50 km/h</option>
-                            <option value="11">55 km/h</option>
-                            <option value="12">60 km/h</option>
-                            <option value="13">65 km/h</option>
-                            <option value="14">70 km/h</option>
-                            <option value="15">75 km/h</option>
-                        </select>
-                    </li>
-
-                    <li>
-                        <label for="distance">Distância:</label>
-                        <select for="distance" name="distance" id="distance">
-                            <option value="0">Desligado</option>
-                            <option value="1">0.5 km</option>
-                            <option value="2">1.0 km</option>
-                            <option value="3">1.5 km</option>
-                            <option selected value="4">2.0 km</option>
-                            <option value="5">2.5 km</option>
-                            <option value="6">3.0 km</option>
-                            <option value="7">3.5 km</option>
-                            <option value="8">4.0 km</option>
-                            <option value="9">4.5 km</option>
-                            <option value="10">5.0 km</option>
-                            <option value="11">5.5 km</option>
-                            <option value="12">6.0 km</option>
-                            <option value="13">6.5 km</option>
-                            <option value="14">7.0 km</option>
-                            <option value="15">7.5 km</option>
-                        </select>
-                    </li>
-
-                    <li>
-                        <label for="stopDetectionThreshold">Limite de Detecção de Parada:</label>
-                        <select name="stopDetectionThreshold" id="stopDetectionThreshold" for="stopDetectionThreshold">
-                            <option value="0">Mais Baixo:</option>
-                            <option selected value="1">Normal</option>
-                            <option value="2">Alto</option>
-                            <option value="3">Mais Alto</option>
-                        </select>
-                    </li>
-
-                    <li>
-                        <label for="stopDetectionWindow">Janela de Detecção de Parada:</label>
-                        <select name="stopDetectionWindow" for="stopDetectionWindow" id="stopDetectionWindow">
-                            <option value="0">Mais Curto</option>
-                            <option selected value="1">Normal</option>
-                            <option value="2">Longo</option>
-                            <option value="3">Mais Longo</option>
-                        </select>
-                    </li>
-
-                    <li>
-                        <label for="MovingStaticStateTimer">Moving to Static State timer:</label>
-                        <select name="movingStaticStateTimer" id="movingStaticStateTimer" for="MovingStaticStateTimer">
-                            <option selected value="0">10 min</option>
-                            <option value="1">0.5 h</option>
-                            <option value="2">1.0 h</option>
-                            <option value="3">1.5 h</option>
-                            <option value="4">2.0 h</option>
-                            <option value="5">2.5 h</option>
-                            <option value="6">3.0 h</option>
-                            <option value="7">3.5 h</option>
-                            <option value="8">4.0 h</option>
-                            <option value="9">4.5 h</option>
-                            <option value="10">5.0 h</option>
-                            <option value="11">5.5 h</option>
-                            <option value="12">6.0 h</option>
-                            <option value="13">6.5 h</option>
-                            <option value="14">7.0 h</option>
-                            <option value="15">7.5 h</option>
-                        </select>
-                    </li>
-
-                    <li>
-                        <label for="AliveMovingStateTimer">Alive Moving state timer:</label>
-                        <select name="aliveMovingStateTimer" for="aliveMovingStateTimer" id="aliveMovingStateTimer">
-                            <option value="0">Desligado</option>
-                            <option value="1">1 h</option>
-                            <option value="2">2 h</option>
-                            <option value="3">3 h</option>
-                            <option selected value="4">4 h</option>
-                            <option value="5">5 h</option>
-                            <option value="6">6 h</option>
-                            <option value="7">7 h</option>
-                            <option value="8">8 h</option>
-                            <option value="9">9 h</option>
-                            <option value="10">10 h</option>
-                            <option value="11">11 h</option>
-                            <option value="12">12 h</option>
-                            <option value="13">13 h</option>
-                            <option value="14">14 h</option>
-                            <option value="15">15 h</option>
-                        </select>
-                    </li>
-
-                    <li>
-                        <label for="downlinkFrequency">Frequência de Downlink em dias (0 = 6 horas):</label>
-                        <input type="number" name="downlinkFrequency" id="downlinkFrequency" for="downlinkFrequency"
-                            min="0" max="255" value="7">
-                    </li>
-
-                    <li>
-                        <label for="aliveStaticStateTimer">Alive Static State timer em horas:</label>
-                        <input type="number" name="aliveStaticStateTimer" id="aliveStaticStateTimer"
-                            for="aliveStaticStateTimer" min="0" max="756" step="3" value="24">
-
-                    </li>
-
-
-                    <li>
-                        <label for="broadcastCap">Limite de Mensagens ao dia:</label>
-                        <select name="broadcastCap" for="broadcastCap" id="broadcastCap">
-                            <option selected value="0">Desligado</option>
-                            <option value="1">1</option>
-                            <option value="2">3</option>
-                            <option value="3">6</option>
-                            <option value="4">9</option>
-                            <option value="5">12</option>
-                            <option value="6">15</option>
-                            <option value="7">18</option>
-                            <option value="8">21</option>
-                            <option value="9">24</option>
-                            <option value="10">27</option>
-                            <option value="11">30</option>
-                            <option value="12">33</option>
-                            <option value="13">36</option>
-                            <option value="14">39</option>
-                            <option value="15">42</option>
-                        </select>
-                    </li>
-
-                </ul>
-            </div>
-
-            <div>
-                <!-- <input type="button" name="formulario" id="botao" value="Calcular" onclick="processData()" /> -->
-                <!-- <input type="text" name="calculado" id="calculado"> -->
-                <label id="calculado"></label>
-                <!-- <div  class="botao" id="botao">Copiar</div> -->
-            </div>
-
-
-        </form>
-    </section>
-
-
-
-
-    <script src="./js/decode.js" defer></script>
+    <h1>Escolha qual modelo você quer usar</h1>
+    <lu>
+        <li><a href="/lykaner.html">Lykaner ( Comum )</a></li>
+        <li><a href="/lykanerTranscod.html">Codificação inversa Lykaner ( Comum )</a></li>
+        <!-- <a href="/lykanerMTPS.html">Lykaner MTPS</a> -->
+    </lu>
 </body>
-
-
-
 
 </html>
