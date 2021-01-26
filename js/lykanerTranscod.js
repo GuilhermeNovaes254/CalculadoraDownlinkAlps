@@ -45,8 +45,9 @@ function translateDownlinkFrequency(value){
 }
 
 function transcode() {
-    const entry = document.getElementById("myInput").value;
+   const entry = document.getElementById("myInput").value;
    // '5008078004540010' default
+   if(entry.length == 16){
     let data = entry.split('');
 
     let bin = []
@@ -91,11 +92,11 @@ function transcode() {
 
     console.log(converted)   
     document.getElementById("output").innerHTML = `
-    <table border="1">
+    <table border="1" id="csstable">
     <tr>
-        <td>Index</td>
-        <td>Caracterísitica</td>
-        <td>Valor</td>
+        <th>Index</th>
+        <th>Caracterísitica</th>
+        <th>Valor</th>
     </tr>
     <tr>
         <td>A</td>
@@ -144,5 +145,6 @@ function transcode() {
     </tr>
     </table>`
     
+   }
 }
 

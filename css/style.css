@@ -69,3 +69,25 @@ ul li {
 table{
     margin-top: 20px
 }
+#csstable {
+font-family: Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+
+#csstable td, #csstable th {
+border: 1px solid #ddd;
+padding: 8px;
+}
+
+#csstable tr:nth-child(even){background-color: #f2f2f2;}
+
+#csstable tr:hover {background-color: #ddd;}
+
+#csstable th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: center;
+background-color: #01358d;
+color: white;
+}
