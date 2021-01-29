@@ -138,7 +138,7 @@ function transcode() {
         </tr>
         <tr>
             <td>I</td>
-            <td>Distância</td>
+            <td>Limite de Mensagens ao dia</td>
             <td>${converted.broadcastCap}</td>
         </tr>
         </table>`
